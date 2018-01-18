@@ -1,7 +1,7 @@
 ## Part 1: Debugging
 
 my.num <- 6
-initials <- "?. ?."
+initials <- "T.M."
 
 my.vector <- c(my.num, initials)
 
@@ -9,7 +9,7 @@ my.vector <- c(my.num, initials)
 vector.sum <- sum(my.vector)
 
 # Describe why this doesn't work: 
-# 
+# You are attempting to add a numeral with a character string. Math operators only work with numerals
 
 install.packages("stringr")
 
@@ -18,21 +18,25 @@ my.line <- "Hey, hey, this is the library"
 print(str_length(my.line))
 
 # Describe why this doesn't work: 
-# 
+# The package was installed but not loaded in with the library() function
 
 said.the.famous <- paste(my.line, " - ", initial)
 
 # Describe why this doesn't work: 
-# 
+# This is a syntax error, the variable name should be initials
 
 
 ## Part 2 - Vector and function practice
 
 # Make a vector and use typeof to check what type R considers it to be
+vector.of.nums <- c(4,5,6)
+typeof(vector.of.nums)
 
 # Write a function `CompareLength` that takes in 2 vectors, and returns the sentence:
 # "The difference in lengths is N"
-
+CompareLength <- function(first.vector, second.vector) {
+  
+}
 
 # Pass two vectors of different length to your `CompareLength` function
 
